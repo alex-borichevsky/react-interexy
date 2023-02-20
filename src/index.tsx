@@ -20,9 +20,10 @@ const root = ReactDOM.createRoot(
 
             <BrowserRouter>
                 <Provider store={store}>
-                    <ModalState>
-                        <App></App>
-                    </ModalState>
+                    <App></App>
+                    {/*<ModalState>/*/}
+                    {/*    <App></App>*/}
+                    {/*</ModalState>*/}
                 </Provider>
             </BrowserRouter>
         </ThemeProvider>

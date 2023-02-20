@@ -15,6 +15,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Chip from '@mui/material/Chip';
 import {useAppDispatch, useAppSelector} from "../hooks/redux";
 import {fetchUsers} from "../store/reducers/ActionCreator";
+import {modalSLice} from "../store/reducers/ModalSlice";
 
 
 const StyledCard = styled(Card)`
@@ -32,7 +33,7 @@ type dataFromApi = {
 };
 export const FunctionComponent1: React.FC = () => {
     const dispatch = useAppDispatch();
-    const {users, isLoading, error} = useAppSelector(state => state.userReducer)
+    const {users,isLoading, error} = useAppSelector(state => state.userReducer)
 
 
     useEffect(() => {

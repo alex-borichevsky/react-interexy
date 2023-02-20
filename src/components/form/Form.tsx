@@ -1,8 +1,14 @@
 import React from "react";
 import { useForm, Controller, FieldValues  } from "react-hook-form";
-import {Input, TextField} from "@mui/material";
+import {Box, Button, Input, TextField} from "@mui/material";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {schema} from "./Form.constant";
+import {styled} from "@mui/material/styles";
+import {purple} from "@mui/material/colors";
+
+const StyledButton = styled(Button)`
+  margin-top: 5px;
+`;
 
 
 export default function Form() {
@@ -18,7 +24,7 @@ export default function Form() {
         reset();
     };
     return (
-        <div className="form-wrapper">
+        <Box component="span" sx={{ p: 2, border: '1px dashed grey', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div  className="form-control">
                     <Controller
@@ -55,11 +61,13 @@ export default function Form() {
                     />
 
                 </div>
-                <div className="form-control">
-                    <label ></label>
-                    <button type="submit">Login</button>
+                <div className="form-control" style={{display:'flex', justifyContent:'center'}}>
+                    <StyledButton color='primary' variant="contained" type='submit'>Submit</StyledButton>
+                    {/*<button type="submit">Login</button>*/}
                 </div>
             </form>
-        </div>
+        </Box>
+
+
     );
 }

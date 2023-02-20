@@ -19,6 +19,7 @@ import {styled} from "@mui/material/styles";
 import ArticleIcon from '@mui/icons-material/Article';
 import Part from "./Part";
 import FetchCards from "./FetchCards";
+import Form from "./form/Form";
 
 const drawerWidth = 240;
 
@@ -134,6 +135,9 @@ export default function Main(props: Props) {
                 <StyledTypography paragraph>
                     <Part/>
                 </StyledTypography>
+
+                <Form/>
+
                 <FetchCards/>
 
             </Box>
