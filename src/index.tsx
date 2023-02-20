@@ -9,6 +9,10 @@ import {ThemeProvider} from "@mui/material";
 import {ModalState} from "./context/ModalContext";
 import {setupStore} from "./store/store";
 import {Provider} from "react-redux";
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+
+serviceWorkerRegistration.register();
+
 
 const store = setupStore();
 
