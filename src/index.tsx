@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import theme from "./theme/theme";
-import {ThemeProvider} from "@mui/material";
+import {CssBaseline, ThemeProvider} from "@mui/material";
 import {ModalState} from "./context/ModalContext";
 import {setupStore} from "./store/store";
 import {Provider} from "react-redux";
@@ -24,6 +24,7 @@ const root = ReactDOM.createRoot(
 
             <BrowserRouter>
                 <Provider store={store}>
+                    <CssBaseline/>
                     <App></App>
                     {/*<ModalState>/*/}
                     {/*    <App></App>*/}

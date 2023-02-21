@@ -22,6 +22,7 @@ import FetchCards from "./FetchCards";
 import Form from "./form/Form";
 import {Grid, Paper} from "@mui/material";
 import {Accordeon} from "./Accordeon";
+import BasicMenu from "./BasicMenu";
 
 const drawerWidth = 240;
 
@@ -34,7 +35,11 @@ const Item = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
 }));
 
-
+ const StyledBox = styled(Box)`
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+ `;
 
 
 interface Props {
@@ -79,7 +84,7 @@ export default function Main(props: Props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box sx={{ display: 'flex', padding: '0 !important', }}>
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -88,7 +93,7 @@ export default function Main(props: Props) {
                     ml: { sm: `${drawerWidth}px` },
                 }}
             >
-                <Toolbar sx={{display:"flex", justifyContent:'center', background:'red'}}>
+                <Toolbar sx={{display:"flex", justifyContent:'center', background:'red', flexDirection: 'column'}}>
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -101,6 +106,11 @@ export default function Main(props: Props) {
                     <Typography variant="h6" noWrap component="div" >
                         Мой сайт
                     </Typography>
+                    <StyledBox>
+                        <BasicMenu/>
+                        <BasicMenu/>
+                        <BasicMenu/>
+                    </StyledBox>
                 </Toolbar>
             </AppBar>
             <Box

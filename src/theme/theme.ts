@@ -73,10 +73,21 @@ const theme: Theme = createTheme({
           font-weight: 700;
           src: local('Inter'), local('Inter-SemiBold'), url(${Inter_Bold}) format('truetype');         
         };
-        body {
-          height: 100vh;
-          font-family: 'Inter';
-        };
+        html,
+         body {
+            padding: 0 !important;
+            margin: 0;
+            min-height: 100vh;
+            width: 100%;
+            font-size: 100%;
+            overflow: visible !important;
+            line-height: 1;
+            font-family: 'Inter';
+            font-size: 14px;
+            -ms-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+         };
         #root {
            height: 100vh;
         };

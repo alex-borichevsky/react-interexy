@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0 !important;
 }
 
 code {
@@ -351,4 +352,6 @@ aside {
   color: #0f7afc;
 }
 
-
+header{
+  padding: 0 !important
+}
