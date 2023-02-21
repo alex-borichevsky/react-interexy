@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 export default function ButtonComponent() {
     return (
         <div>
-            <Button variant="contained">Hello World</Button>
+            <Button sx={{background: '#9c27b0'}}variant="contained">Hello World</Button>
         </div>
     );
 }

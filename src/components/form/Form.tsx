@@ -24,7 +24,7 @@ export default function Form() {
         reset();
     };
     return (
-        <Box component="span" sx={{ p: 2, border: '1px dashed grey', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <Box component="span"  sx={{ p: 2, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div  className="form-control">
                     <Controller

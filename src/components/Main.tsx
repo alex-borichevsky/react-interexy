@@ -20,8 +20,22 @@ import ArticleIcon from '@mui/icons-material/Article';
 import Part from "./Part";
 import FetchCards from "./FetchCards";
 import Form from "./form/Form";
+import {Grid, Paper} from "@mui/material";
+import {Accordeon} from "./Accordeon";
 
 const drawerWidth = 240;
+
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(1),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+}));
+
+
+
 
 interface Props {
     /**
@@ -126,19 +140,26 @@ export default function Main(props: Props) {
                 sx={{ flexGrow: 1, p: 0, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >
                 <Toolbar />
-                <StyledTypography paragraph>
-                   <Part/>
-                </StyledTypography>
-                <StyledTypography paragraph>
-                    <Part/>
-                </StyledTypography>
-                <StyledTypography paragraph>
-                    <Part/>
-                </StyledTypography>
+                <Grid container spacing={0}>
+                    <Grid item xs={9}>
+                        <StyledTypography paragraph>
+                            <Part/>
+                        </StyledTypography>
+                        <StyledTypography paragraph>
+                            <Part/>
+                        </StyledTypography>
+                        <StyledTypography paragraph>
+                            <Part/>
+                        </StyledTypography>
 
-                <Form/>
+                        <Form/>
 
-                <FetchCards/>
+                        <FetchCards/>
+                    </Grid>
+                    <Grid item xs={3}>
+                        <Accordeon/>
+                    </Grid>
+                </Grid>
 
             </Box>
         </Box>
